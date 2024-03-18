@@ -1,13 +1,20 @@
 const express = require('express')
+const path = require('path')
+// require('dotenv').config()
+
+// console.log("Test env",process.env)
+
 const app = express()
 const port = 3000
 
-app.set('views','./src/views')
+app.use(express.static(path.join(__dirname,"public")))
+
+app.set('views',path.join(__dirname,'views'))
 app.set('view engine','ejs')
 
 app.get('/', (req, res) => {
-  res.send('Hello Worldzz!')
-  //res.render('test.ejs')
+  //res.send('Hello World edit lai!')
+  res.render('test.ejs')
 })
 
 app.get('/test', (req, res) => {
