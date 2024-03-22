@@ -2023,3 +2023,19 @@ a {
     border-radius: 50%;
     display: inline-block;
 }
+
+.w3-margin-top-sm {
+    margin-top: 8px !important
+}
+
+.w3-margin-bottom-sm {
+    margin-bottom: 8px !important
+}
+
+.w3-margin-left-sm {
+    margin-left: 8px !important
+}
+
+.w3-margin-right-sm {
+    margin-right: 8px !important
+}

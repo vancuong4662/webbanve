@@ -1,0 +1,7 @@
+CREATE TABLE dulieubanve (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	ten VARCHAR(30),
+	sdt VARCHAR(30),
+	diemdi VARCHAR(40),
+	diemden VARCHAR(50)
+)
