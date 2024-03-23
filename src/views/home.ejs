@@ -10,9 +10,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
@@ -36,13 +34,14 @@
         <a href="#rooms" class="w3-bar-item w3-button w3-mobile">Rooms</a>
         <a href="#about" class="w3-bar-item w3-button w3-mobile">About</a>
         <a href="#contact" class="w3-bar-item w3-button w3-mobile">Contact</a>
-        <a href="#contact" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile">Book Now</a>
+        <a href="admin" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile">Admin</a>
     </div>
     <!-- Header -->
-    <header class="w3-display-container w3-content" style="max-width:1500px;">
-        <img class="w3-image" src="https://www.w3schools.com/w3images/hotel.jpg" alt="The Hotel"
-            style="min-width:1000px" width="1500" height="800">
-        <div class="w3-display-left w3-padding w3-col l6 m8">
+    <header class="" style="width:100%;">
+        <img src="https://www.w3schools.com/w3images/hotel.jpg" alt="The Hotel" style="width: 100%">
+
+        <!--Form đặt vé-->
+        <div class="w3-display-left w3-padding w3-col l6 m8 w3-animate-opacity" id="form-ticket-book">
             <div class="w3-container w3-red">
                 <h2><i class="fa fa-plane w3-margin-right"></i>Đặt vé ngay</h2>
             </div>
@@ -99,12 +98,53 @@
                         </div>
                         <div class="w3-half">
                             <label><i class="fa fa-phone w3-margin-right-sm"></i> SDT :</label>
-                            <input class="w3-input w3-border" type="number" placeholder="0987 456 789" id="input-ve-sdt">
+                            <input class="w3-input w3-border" type="number" placeholder="0987 456 789"
+                                id="input-ve-sdt">
                         </div>
                     </div>
                     <button class="w3-button w3-dark-grey" onclick="datVe()"><i class="fa fa-check w3-margin-right"></i>
                         Đặt vé</button>
-                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Form hiện ra thông tin vé-->
+        <div class="w3-display-left w3-padding w3-col l6 m8 w3-animate-opacity" id="form-ticket-info" style="display: none">
+            <div class="w3-container w3-red">
+                <h2><i class="fa fa-plane w3-margin-right"></i>Đã đặt vé thành công</h2>
+            </div>
+            <div class="w3-container w3-white w3-padding-16">
+                <div>
+                    <h5>Thông tin vé của bạn</h5>
+                    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+                        <tr>
+                            <td class="w3-red">Họ và tên :</td>
+                            <td id="show-ticket-info-ten">Nguyễn Văn A</td>
+                        </tr>
+                        <tr>
+                            <td class="w3-red">SDT :</td>
+                            <td id="show-ticket-info-sdt">0987 654 321</td>
+                        </tr>
+                        <tr>
+                            <td class="w3-red">Mã code :</td>
+                            <td id="show-ticket-info-code">42414E5645303031434F4445</td>
+                        </tr>
+                        <tr>
+                            <td class="w3-red">Điểm Đi :</td>
+                            <td id="show-ticket-info-diemdi">Hà Nội</td>
+                        </tr>
+                        <tr>
+                            <td class="w3-red">Điểm Đến :</td>
+                            <td id="show-ticket-info-diemden">TP HCM</td>
+                        </tr>
+                    </table><br>
+
+                    <button class="w3-button w3-dark-grey" onclick=""><i class="fa fa-print w3-margin-right"></i>
+                        In ra</button>
+
+                    <button class="w3-button w3-dark-grey" onclick=""><i class="fa fa-undo w3-margin-right"></i>
+                        Đặc vé khác</button>
+                </div>
             </div>
         </div>
     </header>
